@@ -4,8 +4,11 @@ import pathlib
 import requests
 
 
-genai.configure(api_key="AIzaSyBjLgNEzTt219-kVgsAnAQmvLpWaxMPEzY")
+
+api_key = os.getenv("GEMINI_KEY")
+genai.configure(api_key=api_key)
 model = genai.GenerativeModel('gemini-2.0-flash')
+
 st.set_page_config(layout = "wide")
 st.markdown("""
         <style>
@@ -237,6 +240,7 @@ footer = """
 """
 
 st.markdown(footer, unsafe_allow_html=True)
+
 
 
 
