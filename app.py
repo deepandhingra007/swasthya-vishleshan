@@ -2,6 +2,7 @@ import streamlit as st
 import google.generativeai as genai
 import pathlib
 import requests
+import os
 
 
 
@@ -240,6 +241,7 @@ footer = """
 """
 
 st.markdown(footer, unsafe_allow_html=True)
+
 
 
 
